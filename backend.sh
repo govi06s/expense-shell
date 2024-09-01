@@ -61,6 +61,10 @@ curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expen
 VALIDATE $? "Downloading the backend code"
 
 cd /app
-rm -rf /app/*
+rm -rf /app/* #remove the existing code
 unzip /tmp/backend.zip &>>$LOG_FILE
 VALIDATE $? "Extarct the backend code"
+
+npm install &>>$LOG_FILE
+pwd
+#cp /home/ec2-user/expense-shell/backend.service /etc/systemd/system/backend.service
