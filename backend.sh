@@ -66,5 +66,5 @@ unzip /tmp/backend.zip &>>$LOG_FILE
 VALIDATE $? "Extarct the backend code"
 
 npm install &>>$LOG_FILE
-pwd
-#cp /home/ec2-user/expense-shell/backend.service /etc/systemd/system/backend.service
+
+cp /home/ec2-user/expense-shell/backend.service /etc/systemd/system/backend.service
