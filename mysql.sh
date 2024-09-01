@@ -46,7 +46,7 @@ VALIDATE $? "Starts the MYSQL server"
  if [ $? -ne 0 ]
  then
      echo "MYSQL root password is not setup, setting now" &>>$LOG_FILE
-     mysql -h <host-address> -u root -p<password>
+     mysql_secure_installation --set-root-pass ExpenseApp@1
      VALIDATE $? "Set the password for Expense"
  else
      echo "MYSQL root password is setup..$Y SKIPPING $N" | tee -a $LOG_FILE
