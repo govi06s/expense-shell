@@ -13,6 +13,7 @@ USERID=$(id -u)
 G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
+R="\e[31m"
 
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
